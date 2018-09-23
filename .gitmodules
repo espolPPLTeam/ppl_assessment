@@ -1,0 +1,9 @@
+[submodule "att"]
+	path = att
+	url = https://github.com/espolPPLTeam/att.git
+[submodule "login"]
+	path = login
+	url = https://github.com/espolPPLTeam/ppl_login.git
+[submodule "api"]
+	path = api
+	url = https://github.com/espolPPLTeam/ppl_assessment_api.git
