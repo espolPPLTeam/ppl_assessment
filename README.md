@@ -19,13 +19,26 @@ git clone --recursive https://github.com/espolPPLTeam/ppl_assessment
 Actualizar todos los submódulos
 
 ```sh
-git submodule update --init --recursive
+git submodule update --remote --recursive
+```
+<!-- git submodule update --recursive --init -->
+
+```sh
+npm install
 ```
 
 ## Development
 
-```sh
+1. Instalar las depedencias de todos los submódulos
 
+```sh
+npm run install:dev 
+```
+
+2. Correr el api gateway
+
+```sh
+## @Edison
 ```
 
 ## Production

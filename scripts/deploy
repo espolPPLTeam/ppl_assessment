@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+# Ir a cada carpeta e instalar las depedencias
+
+# Si en una carpeta del front, build
+
+install() {
+  if [ -x "$(command -v $1)" ]; then
+    echo -e "\e[4mYa tiene instalado $1\e[0m"
+  else
+    echo -e "\e[4mInstalando $1\e[0m"
+    apt-get install $1 -y
+  fi
+}

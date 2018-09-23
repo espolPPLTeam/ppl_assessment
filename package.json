@@ -1,0 +1,14 @@
+{
+  "name": "ppl_assessment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/espolPPLTeam/ppl_assessment.git",
+  "author": "Joel Rodriguez <joelerll@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+  	"install:dev": "node scripts/development.js"
+  },
+  "devDependencies": {
+    "shelljs": "^0.8.2"
+  }
+}
