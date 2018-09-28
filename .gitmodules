@@ -10,3 +10,6 @@
 [submodule "front_apps"]
 	path = front_apps
 	url = https://github.com/espolPPLTeam/front_apps.git
+[submodule "ppl_app_lab"]
+	path = ppl_app_lab
+	url = https://github.com/razerjon24/ppl_app_lab.git

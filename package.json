@@ -6,9 +6,15 @@
   "author": "Joel Rodriguez <joelerll@gmail.com>",
   "license": "MIT",
   "scripts": {
-  	"install:dev": "node scripts/development.js"
+    "install:dev": "node scripts/development.js",
+    "dev": "nodemon gateway.js"
   },
   "devDependencies": {
     "shelljs": "^0.8.2"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "http-proxy-middleware": "^0.19.0",
+    "morgan": "^1.9.1"
   }
 }

@@ -8,6 +8,16 @@ Este repositorio es la unión de todos los microservicios
 
 * Mongodb
 
+## Puertos microservicios
+
+Puerto microservicio master: 79999
+
+* Login api: 8001
+* Assessment api: 8002
+* Att api: 8003
+* front: 8004
+* ppl lab v1: 8000
+
 ## Inicial
 
 Clonarlo desde cero
