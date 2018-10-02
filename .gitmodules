@@ -13,3 +13,6 @@
 [submodule "ppl_app_lab"]
 	path = ppl_app_lab
 	url = https://github.com/razerjon24/ppl_app_lab.git
+[submodule "assessment_realtime"]
+	path = assessment_realtime
+	url = https://github.com/espolPPLTeam/assessment_realtime.git
