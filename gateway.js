@@ -39,5 +39,5 @@ app.use('/', proxy({
 
 
 app.listen(envs['MICROSERVICIO_PORT'], () => {
-    console.log('Proxy listening on port 7999')
+    console.log('Proxy listening on port 8000')
 });
