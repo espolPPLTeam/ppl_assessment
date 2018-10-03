@@ -33,10 +33,8 @@ app.use('/ppl/estudiantes', proxy({
 
 app.use('/', proxy({
   target: `http://localhost:${envs['FRONT_PORT']}`,
-  pathRewrite: {'^/' : '/login'}
+  pathRewrite: {'^/' : '/'}
 }))
-
-
 
 app.listen(envs['MICROSERVICIO_PORT'], () => {
     console.log('Proxy listening on port 8000')
