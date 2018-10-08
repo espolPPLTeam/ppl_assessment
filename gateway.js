@@ -26,9 +26,14 @@ app.use('/api/login', proxy({
 }))
 
 // front
-app.use('/ppl/estudiantes', proxy({
+app.use('/assessment/estudiantes', proxy({
   target: `http://localhost:${envs['FRONT_PORT']}`,
   pathRewrite: {'^/ppl/estudiantes' : '/ppl/estudiantes'}
+}))
+
+app.use('/assessment/profesores', proxy({
+  target: `http://localhost:${envs['FRONT_PORT']}`,
+  pathRewrite: {'^/assessment/profesores' : '/assessment/profesores'}
 }))
 
 app.use('/', proxy({
