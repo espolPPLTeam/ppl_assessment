@@ -25,6 +25,14 @@ app.use('/api/login', proxy({
   target: `http://localhost:${envs['LOGIN_PORT']}` 
 }))
 
+app.use('/api/att', proxy({
+  pathRewrite: {'^/api/att' : '/api/att'}, 
+  target: `http://localhost:${envs['ATT_PORT']}`,
+  ws: true,
+  changeOrigin:true,
+  secure: false
+}))
+
 // front
 app.use('/assessment/estudiantes', proxy({
   target: `http://localhost:${envs['FRONT_PORT']}`,
@@ -34,6 +42,16 @@ app.use('/assessment/estudiantes', proxy({
 app.use('/assessment/profesores', proxy({
   target: `http://localhost:${envs['FRONT_PORT']}`,
   pathRewrite: {'^/assessment/profesores' : '/assessment/profesores'}
+}))
+
+app.use('/att/profesores', proxy({
+  target: `http://localhost:${envs['FRONT_PORT']}`,
+  pathRewrite: {'^/att/profesores' : '/att/profesores'}
+}))
+
+app.use('/att/estudiantes', proxy({
+  target: `http://localhost:${envs['FRONT_PORT']}`,
+  pathRewrite: {'^/att/estudiantes' : '/att/estudiantes'}
 }))
 
 app.use('/', proxy({
