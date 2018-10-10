@@ -55,3 +55,33 @@ npm run install:dev
 
 ```sh
 ```
+
+./production # no usarlo en LOCAL
+export $(cat .env | xargs) # instalar las variables de entorno
+export NODE_ENV=production # 
+pm2 start server.js
+# pm2 monit
+# pm2 restart
+# pm2 list
+# pm2 stop 0
+# https://www.npmjs.com/package/pm2
+
+
+pm2 start process.yml
+
+
+apps:
+  - script   : app.js
+    instances: 4
+    exec_mode: cluster
+  - script : worker.js
+    watch  : true
+    env    :
+      NODE_ENV: development
+    env_production:
+      NODE_ENV: production
+
+
+      pm2 start app.js --name my-api # Name process
+      pm2 restart all
+      pm2 stop 0  

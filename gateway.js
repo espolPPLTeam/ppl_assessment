@@ -25,6 +25,18 @@ app.use('/api/login', proxy({
   target: `http://localhost:${envs['LOGIN_PORT']}` 
 }))
 
+// var wsProxy = proxy('/api/att', {
+//   target: `http://localhost:${envs['ATT_PORT']}`,
+//   // pathRewrite: {
+//   //  '^/websocket' : '/socket',        // rewrite path.
+//   //  '^/removepath' : ''               // remove path.
+//   // },
+//   changeOrigin: true, // for vhosted sites, changes host header to match to target's host
+//   ws: true, // enable websocket proxy
+//   logLevel: 'debug'
+// })
+// app.use(wsProxy)
+
 app.use('/api/att', proxy({
   pathRewrite: {'^/api/att' : '/api/att'}, 
   target: `http://localhost:${envs['ATT_PORT']}`,
